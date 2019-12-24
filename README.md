@@ -3,6 +3,7 @@
 ![](https://img.shields.io/github/languages/code-size/ddatsko/medButton/)
 ![](https://img.shields.io/github/last-commit/ddatsko/medButton/)
 ![](https://img.shields.io/github/languages/count/ddatsko/medButton/)
+
 ## Overview
 **Medical button** is a device for calling emergency help in field conditions and a base station for it  
 **Purpose of the device** - to help people easily and extremely quickly call for the emergency help in field conditions
