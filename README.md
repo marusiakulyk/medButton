@@ -14,8 +14,10 @@
 6. The device should consume extremely small amount of power to be able to work for a long time without recharging
 7. The device soud be resistent to poor storing conditions (water, dust, mud, low and high temperatures)
 
-## Devices, we are using
+## Modules, we are using
 The button will be based on [PSOC 6 BLE PIONEER KIT](https://www.cypress.com/documentation/development-kitsboards/psoc-6-ble-pioneer-kit-cy8ckit-062-ble).
+![psoc](https://user-images.githubusercontent.com/35429810/71412816-fb660980-2657-11ea-8a27-c2d4c0a31732.png)
+
 
 ##### GSM module:
 We started working with [GSM](https://www.faranux.com/product/sim800l-v2-0-5v-wirelessgsm-gprs-module-quad-band/) module with chip SIM800L, but in future it will be replaced with a better one.
