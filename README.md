@@ -6,13 +6,13 @@
 
 ### General requirements for the device
 
-- Connection with base station with **GSM module**, or reserve radiochannel **LoRaWAN**.
-- Creating unique **identification** for every device. If enemy get this device it must be detected and **doesn't effect on another devices**.
-- Data transfer should be **encrypted**, to prevent enemy getting information about location of soldier.
-- Methods of identification and confirmation should not be very complicated, as the device will be usually used by injured people in field conditions.
-- It may be useful to send information about the state of a person, calling for help (heart rate, blood pressure, etc.)
-- The device should consume extremely small amount of power to be able to work for a long time without recharging
-- The device soud be resistent to poor storing conditions (water, dust, mud, low and high temperatures)
+1. Connection with base station with **GSM module**, or reserve radiochannel **LoRaWAN**.
+2. Creating unique **identification** for every device. If enemy get this device it must be detected and **doesn't effect on another devices**.
+3. Data transfer should be **encrypted**, to prevent enemy getting information about location of soldier.
+4. Methods of identification and confirmation should not be very complicated, as the device will be usually used by injured people in field conditions.
+5. It may be useful to send information about the state of a person, calling for help (heart rate, blood pressure, etc.)
+6. The device should consume extremely small amount of power to be able to work for a long time without recharging
+7. The device soud be resistent to poor storing conditions (water, dust, mud, low and high temperatures)
 
 ## Devices, we are using
 The button will be based on [PSOC 6 BLE PIONEER KIT](https://www.cypress.com/documentation/development-kitsboards/psoc-6-ble-pioneer-kit-cy8ckit-062-ble).
