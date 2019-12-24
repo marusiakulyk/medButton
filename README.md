@@ -20,9 +20,24 @@ The button will be based on [PSOC 6 BLE PIONEER KIT](https://www.cypress.com/doc
 
 
 ##### GSM module:
-We started working with [GSM](https://www.faranux.com/product/sim800l-v2-0-5v-wirelessgsm-gprs-module-quad-band/) module with chip SIM800L, but in future it will be replaced with a better one.
+We started working with [GSM](https://www.faranux.com/product/sim800l-v2-0-5v-wirelessgsm-gprs-module-quad-band/) module with chip SIM800L, but in future it may be replaced with a better one. There are some problems, as the module does not work well with most of SIM cards. We also tried to make a bigger module work ([SIM900 Module](https://www.itead.cc/sim900-sim900a-gsm-gprs-minimum-system-module.html)). It uses SIM900 chip instead of SIM800, and we were able to make it work with one of SIM cards.
 ##### GPS module
 The module, we worked with is [Ublox NEO-6M GPS module](https://www.electroschematics.com/neo-6m-gps-module/). The problem is that the signal is usually too weak. So, it is under a question, what module and antena to use in the final device.
 ##### Lora
 // TODO
 
+
+### Working process
+#### What is done already
+- GPS is working well, data is succesfully transmited via UART.
+- GPS module can be configured from PSOC via UART, all the data is parsed and presented in convenient way
+- A bigger GSM module seem to work well with one of SIM cards (we haven't sent any SMS's, as there was no enough money to do so) 
+- LoRa ...
+- RTOS ...
+
+#### What should be done
+- Make a GSM module in base station receive the data
+- Make everything work together (get information from GPS, Send it to the base station, using LoRa and GSM)
+- Take care about encryption of the data
+- Discuss, what identification methods should be used and implement them
+- Make a case for the button and test it
