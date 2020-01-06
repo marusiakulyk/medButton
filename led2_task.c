@@ -143,7 +143,7 @@ void task_capsense(void* param)
     /* Repeatedly running part of the task */
     for(;;)
     {
-
+    	cyhal_gpio_write((cyhal_gpio_t)CYBSP_USER_LED2, CYBSP_LED_STATE_ON);
     	number--;
     	xQueueReset(task_2_q);
     	xQueueSendToBack(task_2_q,&number,0u);
