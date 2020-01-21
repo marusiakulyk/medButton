@@ -138,12 +138,12 @@ void task_1(){
 	}
 
 
-//	Cy_SCB_UART_PutString(SCB1, "AT+CMGS=\x22+380673101033\x22\x0d");
-//	CyDelay(1000);
-//	Cy_SCB_UART_PutString(SCB1, message);
-//	CyDelay(1000);
-//	Cy_SCB_UART_PutString(SCB1, "ATH0\x0d")  ;
-//	CyDelay(5000);
+	Cy_SCB_UART_PutString(SCB1, "AT+CMGS=\x22+380673101033\x22\x0d");
+	CyDelay(1000);
+	Cy_SCB_UART_PutString(SCB1, message);
+	CyDelay(1000);
+	Cy_SCB_UART_PutString(SCB1, "ATH0\x0d")  ;
+	CyDelay(5000);
 	i = 0;
 	for(int s = 0;s < 150; s++)
 	{
