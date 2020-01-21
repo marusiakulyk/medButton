@@ -54,7 +54,7 @@ void task_led(void* param)
 
 	uint8_t read_data;
 	char buffer[120] = "";
-	//cyhal_gpio_write((cyhal_gpio_t)CYBSP_USER_LED1, CYBSP_LED_STATE_ON);
+	cyhal_gpio_write((cyhal_gpio_t)CYBSP_USER_LED1, CYBSP_LED_STATE_ON);
 	for(;;)
 	{
 		cyhal_gpio_write((cyhal_gpio_t)CYBSP_USER_LED1, CYBSP_LED_STATE_ON);
@@ -69,18 +69,15 @@ void task_led(void* param)
 			}
 			buffer[counter] = 0;
 //			printf("%s\n\r", buffer);
-			if(strstr(buffer,"GPGSV") && !strstr(buffer,"GPGSV,,,")){
-//			if(strstr(buffer,"GPGGA") && !strstr(buffer,"GPGGA,,,")){ //old module
-//			if(strstr(buffer,"GNGLL") && !strstr(buffer,"GNGLL,,,")){ //new module
-//				printf("blyat\n\r");
+//			"GPGSV"
+			if((strstr(buffer,"GNGLL") || strstr(buffer,"GPGGA")) &&
+					(!strstr(buffer,"GNGLL,,,") || !strstr(buffer,"GPGGA,,,"))){
 				xQueueReset(task_1_q);
-//				printf("blyat1\n\r");
+
 				for(int j = 0; j < 120; j++){
 					xQueueSendToBack(task_1_q,&buffer[j],0u);
 					}
-				//cyhal_gpio_write((cyhal_gpio_t)CYBSP_USER_LED1, CYBSP_LED_STATE_OFF);
 				}
-			//CyDelay(100);
 			}
 		else
 		{

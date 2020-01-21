@@ -18,7 +18,7 @@
  */
 #define TASK_CAPSENSE_PRIORITY      (configMAX_PRIORITIES - 2)
 #define TASK_LED_PRIORITY           (configMAX_PRIORITIES - 2)
-#define TASK_1_PRIORITY           (configMAX_PRIORITIES - 1)
+#define TASK_1_PRIORITY           (configMAX_PRIORITIES - 2)
 
 /* Stack sizes of user tasks in this project */
 #define TASK_CAPSENSE_STACK_SIZE    (configMINIMAL_STACK_SIZE)
